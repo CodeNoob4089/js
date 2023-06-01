@@ -13,6 +13,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
   .then(data => {
     movies = data.results;
     displayMovies(movies);
+    // filter(movies);
   })
   .catch(err => console.error(err));
 
@@ -29,9 +30,15 @@ function displayMovies(movies) {
         <p>내용 요약: ${movie.overview}</p>
         <p class="rating">평점: ${movie.vote_average}</p>
       `;
+      card.setAttribute("data-id",movie.id);
+      card.addEventListener('click',function(event) {
+        event.currentTarget.getAttribute('data-id');
+        const id = event.currentTarget.getAttribute('data-id');
+        alert(`id = ${id}`);
+      });
     movieContainer.appendChild(card);
   });
-}
+};
 
 function filter() {
   let input = document.getElementById("searchInput").value.toLowerCase();
