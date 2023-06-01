@@ -5,12 +5,6 @@ body {
     background-color: #f1f1f1;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.5s ease-in-out;
-}
-
 header {
     position:sticky;
     top:0;
@@ -25,11 +19,12 @@ header:hover {
     background-color: #333;
 }
 
-header:hover a {
+header:hover h1 {
     color: #f1f1f1;
 }
 
 h1 {
+    cursor: pointer;
     margin-bottom: 30px;
     color: #333;
     transition: color 0.5s ease-in-out;

@@ -13,7 +13,6 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
   .then(data => {
     movies = data.results;
     displayMovies(movies);
-    // filter(movies);
   })
   .catch(err => console.error(err));
 
