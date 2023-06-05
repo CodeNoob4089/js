@@ -35,9 +35,8 @@ function displayMovies(movies) {
       `;
     card.setAttribute("data-id", movie.id);
     card.addEventListener("click", function (event) {
-      event.currentTarget.getAttribute("data-id");
       const id = event.currentTarget.getAttribute("data-id");
-      alert(`id = ${id}`);
+      window.location.href = `subpage.html?id=${id}`;
     });
     movieContainer.appendChild(card);
   });
