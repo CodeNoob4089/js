@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>The Movie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <title>The Movie</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <header>
+      <h1 onclick="location.reload()">The Movie</h1>
+    </header>
 
-<body>
-  <header>
-    <h1 onclick="location.reload()">The Movie</h1>
-  </header>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="영화 제목 검색"
+        autofocus
+      />
+      <button onclick="filter()">검색</button>
+      <!-- onclick이벤트에 filter()함수를 담아 실행하도록 적용 -->
+    </div>
 
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="영화 제목 검색" autofocus/>
-    <button onclick="filter()">검색</button>
-    <!-- onclick이벤트에 filter()함수를 담아 실행하도록 적용 -->
-    
-  </div>
-
-  <div id="movieContainer" class="card-container"></div>
-  <script src="main.js"></script>
-</body>
-
-
+    <div id="movieContainer" class="card-container"></div>
+    <script src="main.js"></script>
+  </body>
 </html>
