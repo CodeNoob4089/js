@@ -1,8 +1,9 @@
-let String = window.location.search;
-let urlParam = new URLSearchParams(String);
-let movieId = urlParam.get("id");
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let movieId = urlParams.get("id");
 
-let movies = [];
+let movie = {};
+
 const options = {
   method: "GET",
   headers: {
@@ -15,7 +16,23 @@ const options = {
 fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
   .then((response) => response.json())
   .then((data) => {
-    movies = data.results;
-    Showmovies(movies);
+    movie = data;
+    showMovieDetails();
   })
   .catch((err) => console.error(err));
+
+function showMovieDetails() {
+  const movieContainer = document.getElementById("movieContainer");
+  movieContainer.innerHTML = "";
+
+  const detail = document.createElement("div");
+  detail.className = "info";
+  detail.innerHTML = `
+    <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+    <h2>${movie.title}</h2>
+    <p>개봉일: ${movie.release_date}</p>
+    <p>줄거리: ${movie.overview}</p>
+    <p class="rating">평점: ${movie.vote_average}</p>
+  `;
+  movieContainer.appendChild(detail);
+}
