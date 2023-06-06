@@ -34,5 +34,10 @@ function showMovieDetails() {
     <p>줄거리: ${movie.overview}</p>
     <p class="rating">평점: ${movie.vote_average}</p>
   `;
+  document.title = `${movie.title} | 상세보기`;
   movieContainer.appendChild(detail);
 }
+let HomeBtn = document.getElementsByClassName("button");
+HomeBtn[0].addEventListener("click", function () {
+  window.location.href = "index.html";
+});
