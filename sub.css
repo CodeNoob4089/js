@@ -1,0 +1,61 @@
+.temp {
+  display: flex;
+  position: relative;
+  z-index: 100;
+  padding-top: 80px;
+  margin: 30px 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  margin-right: 30px;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  filter: blur(8px);
+  opacity: 0.75;
+}
+
+p {
+  max-width: 600px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+}
+.info > div > h1 {
+  margin-top: 0;
+}
+.info > div > ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.backBtn {
+  z-index: 100;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reviewContainer {
+  position: relative;
+  z-index: 100;
+}
+i {
+  font-size: 30px;
+}
