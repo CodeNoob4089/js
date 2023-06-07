@@ -9,10 +9,7 @@ const options = {
 
 let movies = [];
 
-fetch(
-  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
-  options
-)
+fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", options)
   .then((response) => response.json())
   .then((data) => {
     movies = data.results;
@@ -27,12 +24,14 @@ function displayMovies(movies) {
   movies.forEach((movie) => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `
-        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
-        <h2>${movie.title}</h2>
-        <p>내용 요약: ${movie.overview}</p>
-        <p class="rating">평점: ${movie.vote_average}</p>
-      `;
+    card.innerHTML = `<div class="img">
+                        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+                      </div>
+                      <div class="card-text">
+                        <h3>${movie.title}</h3>
+                        <p>${movie.overview}</p>
+                        <h2 class="rating">${movie.vote_average}</h2>
+                      </div>`;
     card.setAttribute("data-id", movie.id);
     card.addEventListener("click", function (event) {
       const id = event.currentTarget.getAttribute("data-id");
@@ -49,19 +48,28 @@ function filter() {
   });
 
   const movieContainer = document.getElementById("movieContainer");
+  console.log(movieContainer);
+
   movieContainer.innerHTML = "";
 
   search.forEach(function (movie) {
     const card = document.createElement("div");
     card.className = "card";
 
-    card.innerHTML = `
-        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
-        <h2>${movie.title}</h2>
-        <p>내용 요약: ${movie.overview}</p>
-        <p class="rating">평점: ${movie.vote_average}</p>
-      `;
+    card.innerHTML = `<div class="img">
+                        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+                      </div>
+                      <div class="card-text">
+                        <h3>${movie.title}</h3>
+                        <p>${movie.overview}</p>
+                        <h2 class="rating">${movie.vote_average}</h2>
+                      </div>`;
 
+    card.setAttribute("data-id", movie.id);
+    card.addEventListener("click", function (event) {
+      const id = event.currentTarget.getAttribute("data-id");
+      window.location.href = `subpage.html?id=${id}`;
+    });
     movieContainer.appendChild(card);
   });
 }

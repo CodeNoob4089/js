@@ -121,3 +121,17 @@ h1 {
   text-align: center;
   font-weight: bold;
 }
+
+/* 검색하기 버튼 */
+a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f59000;
+}
