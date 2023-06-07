@@ -1,6 +1,7 @@
 let queryString = window.location.search;
 let urlParams = new URLSearchParams(queryString);
 let movieId = urlParams.get("id");
+const back = document.querySelector(".background");
 
 let movie = {};
 
@@ -28,16 +29,19 @@ function showMovieDetails() {
   const detail = document.createElement("div");
   detail.className = "info";
   detail.innerHTML = `
-    <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
-    <h2>${movie.title}</h2>
-    <p>개봉일: ${movie.release_date}</p>
-    <p>줄거리: ${movie.overview}</p>
-    <p class="rating">평점: ${movie.vote_average}</p>
+  <div class="poster">
+  <img alt="포스터" src="https://image.tmdb.org/t/p/w300/${
+    movie.poster_path
+  }" />
+  </div>
+  <div>
+  <h1>${movie.title}</h1>
+  <h3>${movie.release_date}</h3>
+  <h3>평점 : ${movie.vote_average.toFixed(1)}</h3>
+  <p>${movie.overview}</p>
+  </div>
   `;
   document.title = `${movie.title} | 상세보기`;
   movieContainer.appendChild(detail);
+  back.style.backgroundImage = `url(https://image.tmdb.org/t/p/w300/${movie.backdrop_path})`;
 }
-let HomeBtn = document.getElementsByClassName("button");
-HomeBtn[0].addEventListener("click", function () {
-  window.location.href = "index.html";
-});
