@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="intro.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <title>Intro</title>
+  </head>
+  <body>
+    <audio>
+      <source src="intro.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="wrapper">
+      <div class="overlay"></div>
+      <div class="text">THE MOVIE</div>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        let overlay = document.querySelector(".overlay");
+        overlay.classList.add("fade-in");
+      }, 4000);
+      let text = document.querySelector(".text");
+      text.addEventListener("click", function (event) {
+        window.location.href = "index.html";
+      });
+      let music = document.querySelector(".wrapper");
+      let audio = document.querySelector("audio");
+      audio.volume = 0.05;
+      music.addEventListener("click", function (event) {
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
