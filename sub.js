@@ -34,19 +34,20 @@ function showMovieDetails() {
     movie.poster_path
   }" />
   </div>
-  <div>
+  <div class="desc">
   <h1>${movie.title}</h1>
   <h3>${movie.release_date}</h3>
-  <h3>평점 : ${movie.vote_average.toFixed(1)}</h3>
-  <p>${movie.overview}</p>
+  <h2>${movie.vote_average.toFixed(1)}</h2>
   <ul>
   ${movie.genres.map((el) => {
     return `<li>${el.name}</li>`;
   })}
   </ul>
+  <p>${movie.overview}</p>
+
   </div>
   `;
   document.title = `${movie.title} | 상세보기`;
   movieContainer.appendChild(detail);
-  back.style.backgroundImage = `url(https://image.tmdb.org/t/p/w300/${movie.backdrop_path})`;
+  // back.style.backgroundImage = `url(https://image.tmdb.org/t/p/w300/${movie.backdrop_path})`;
 }

@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;
+  background-color: black;
+  height: 100vh;
 }
 
 header {
@@ -104,8 +105,8 @@ h1 {
   height: 100%;
   padding: 15px;
   box-sizing: border-box;
-  opacity: 0;
-  transition: opacity 0.35s ease-in-out;
+  /* opacity: 0;
+  transition: opacity 0.35s ease-in-out; */
 }
 
 .card:hover .card-text {
@@ -168,9 +169,12 @@ a:active {
 
   line-height: 1.1em;
   padding-bottom: calc(2.1 * var(--s));
-  background: conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0 bottom var(--s) / calc(2 * var(--s)) var(--s) repeat-x,
-    conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s) bottom 0 / calc(2 * var(--s)) var(--s) repeat-x;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
+  background: conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0
+      bottom var(--s) / calc(2 * var(--s)) var(--s) repeat-x,
+    conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s)
+      bottom 0 / calc(2 * var(--s)) var(--s) repeat-x;
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
   transition: 0.5s;
 }
 .hover-1:hover {
@@ -180,7 +184,8 @@ a:active {
 
 @font-face {
   font-family: "TheJamsil5Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
 }
