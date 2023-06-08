@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sub.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Eo_circle_pink_letter-m.svg/1200px-Eo_circle_pink_letter-m.svg.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/97df680082.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="review.js" defer></script>
+  </head>
+
+  <body>
+    <div class="subpage-Container">
+      <div id="movieContainer"></div>
+      <div class="homeBtn">
+        <a href="../Home/index.html">
+          <i class="fa-sharp fa-solid fa-house" style="color: #d5207a"></i>
+        </a>
+      </div>
+      <div class="searchBtn">
+        <a href="search.html">
+          <i class="fas fa-search fa-2x" style="color: #d5207a"></i>
+        </a>
+      </div>
+      <div class="review-list">
+        <div id="review-list" style="overflow-y: scroll"></div>
+        <form onsubmit="return false;">
+          <input class="username" placeholder="id" autofocus />
+          <input class="review" placeholder="comment" />
+          <input class="password" type="password" placeholder="password" />
+          <button class="submit-button">SAVE</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-copyright">
+          Copyright 2023. The Movie. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="sub.js"></script>
+  </body>
+</html>

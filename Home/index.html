@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Movie</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Eo_circle_pink_letter-m.svg/1200px-Eo_circle_pink_letter-m.svg.png"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 onclick="location.reload()" class="home">THE MOVIE</h1>
+      <div class="title">
+        <hr />
+        <h2>TOP RATED<br />MOVIE</h2>
+        <hr />
+      </div>
+      <div class="title-Text">
+        Film, as an art form, offers a profound medium for philosophical
+        analysis. Through storytelling and visual expression, it explores
+        fundamental questions about human existence, morality, and the nature of
+        reality. Films can challenge our perspectives, provoke introspection,
+        and inspire philosophical reflection. They provide a unique platform to
+        examine complex themes and engage with philosophical ideas in a
+        thought-provoking and accessible way.
+      </div>
+      <div class="top-rated">
+        <div class="top-container">
+          <div id="topMoviesContainer">
+            <div></div>
+            <div class="top-card" data-rank="1" id="topMovie1"></div>
+            <div class="top-card" data-rank="2" id="topMovie2"></div>
+            <div class="top-card" data-rank="3" id="topMovie3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="search-container">
+        <a href="../Sub/search.html">SEARCH</a>
+      </div>
+    </header>
+    <div id="movieContainer" class="card-container"></div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-copyright">
+          Copyright 2023. The Movie. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
