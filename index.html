@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>The Movie</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <title>The Movie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body>
-    <header>
-      <h1 onclick="location.reload()">The Movie</h1>
+<body>
+  <header>
+    <h1 onclick="location.reload()" class="home">THEMOVIE</h1>
+    <div class="title">
+      <hr>
+      <h2>TOP RATED<br>MOVIE</h2>
+      <hr>
+    </div>
+    <div class="text">This is top rated movie.This is top rated movie.This is top rated movie.This is top rated
+      movie.This is top rated movie.This is top rated movie.This is top rated movie.This is top rated movie.This is top
+      rated movie.This is top rated movie.
+    </div>
+    <div class="top-rated">
                   <div class="top-container">
                 <div id="topMoviesContainer">
                     <div></div>
                     <div class="top-card" data-rank="2" id="topMovie1"></div>
                     <div class="top-card" data-rank="1" id="topMovie2"></div>
                     <div class="top-card" data-rank="3" id="topMovie3"></div>
-                </div>
-    </header>
-  <div class="search-container">
-    <a href="search.html" class="hover-1">SEARCH</a>
-  </div>
-
+                    </div></div>
+    </div>
+    <div class="search-container">
+      <a href="search.html" class="hover-1">SEARCH</a>
+    </div>
+  </header>
   <div id="movieContainer" class="card-container"></div>
   <script src="main.js"></script>
 </body>
 </html>
+
