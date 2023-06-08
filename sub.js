@@ -3,7 +3,6 @@ let urlParams = new URLSearchParams(queryString);
 let movieId = urlParams.get("id");
 const back = document.querySelector(".background");
 
-
 let movie = {};
 
 const options = {
@@ -20,11 +19,9 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
   .then((data) => {
     movie = data;
     showMovieDetails();
-    loadComments();
+    // loadComments();
   })
   .catch((err) => console.error(err));
-
-
 
 function showMovieDetails() {
   const movieContainer = document.getElementById("movieContainer");
@@ -34,9 +31,7 @@ function showMovieDetails() {
   detail.className = "info";
   detail.innerHTML = `
   <div class="poster">
-  <img alt="포스터" src="https://image.tmdb.org/t/p/w300/${
-    movie.poster_path
-  }" />
+  <img alt="포스터" src="https://image.tmdb.org/t/p/w300/${movie.poster_path}" />
   </div>
   <div class="desc">
   <h1>${movie.title}</h1>

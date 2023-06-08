@@ -1,3 +1,7 @@
+let query = window.location.search;
+let urlParam = new URLSearchParams(query);
+let id = urlParam.get("id");
+
 //localStorage에 저장된 값 화면에 띄워주기
 let commentLength = localStorage.length; //localStorage에 저장된 data 갯수
 
@@ -16,12 +20,14 @@ comments.sort((a, b) => new Date(b["date"]) - new Date(a["date"])); //시간순 
 
 const commentDiv = document.querySelector("#review-list");
 comments.map((comment) => {
-  const commentUl = document.createElement("ul");
-  commentUl.innerHTML = `<li class="id" style="font-weight:bold;">${comment.username}</li>
-  <li class="comment">${comment.review}</li>
-    <button id="${comment.username}" class="delete">del</button>
-    <button class="edit">edit</button>`;
-  commentDiv.appendChild(commentUl);
+  if (id == comment.id) {
+    const commentUl = document.createElement("ul");
+    commentUl.innerHTML = `<li class="id" style="font-weight:bold;">${comment.username}</li>
+    <li class="comment">${comment.review}</li>
+      <button id="${comment.username}" class="delete">del</button>
+      <button class="edit">edit</button>`;
+    commentDiv.appendChild(commentUl);
+  }
 });
 
 //작성 시간
@@ -36,6 +42,7 @@ function submit() {
   const review = document.querySelector(".review").value; //리뷰
   const newPassword = document.querySelector(".password").value; //비밀번호
   let comment = {
+    id: id,
     username: username,
     review: review,
     password: newPassword,
