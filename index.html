@@ -8,14 +8,26 @@
 
 <body>
   <header>
-    <h1 onclick="location.reload()">The Movie</h1>
+    <h1 onclick="location.reload()" class="home">THEMOVIE</h1>
+    <div class="title">
+      <hr>
+      <h2>TOP RATED<br>MOVIE</h2>
+      <hr>
+    </div>
+    <div class="text">This is top rated movie.This is top rated movie.This is top rated movie.This is top rated
+      movie.This is top rated movie.This is top rated movie.This is top rated movie.This is top rated movie.This is top
+      rated movie.This is top rated movie.
+    </div>
+    <div class="top-rated">
+      <img src="https://www.themoviedb.org/t/p/original/voddFVdjUoAtfoZZp2RUmuZILDI.jpg">
+      <img src="https://www.themoviedb.org/t/p/original/voddFVdjUoAtfoZZp2RUmuZILDI.jpg">
+      <img src="https://www.themoviedb.org/t/p/original/voddFVdjUoAtfoZZp2RUmuZILDI.jpg">
+    </div>
+    <div class="search-container">
+      <a href="search.html" class="hover-1">SEARCH</a>
+    </div>
   </header>
 
-  <div class="search-container">
-    <!-- <input type="text" id="searchInput" placeholder="영화 제목 검색" autofocus /> -->
-    <!-- <button onclick="filter()">검색</button> -->
-    <a href="search.html" class="hover-1">SEARCH</a>
-  </div>
 
   <div id="movieContainer" class="card-container"></div>
   <script src="main.js"></script>

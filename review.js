@@ -17,10 +17,10 @@ comments.sort((a, b) => new Date(b["date"]) - new Date(a["date"])); //시간순 
 const commentDiv = document.querySelector("#review-list");
 comments.map((comment) => {
   const commentUl = document.createElement("ul");
-  commentUl.innerHTML = `<label>작성자</label><li>${comment.username}</li>
-  <label>리뷰</label><li>${comment.review}</li>
-    <button class="edit">수정</button>
-    <button id="${comment.username}" class="delete">삭제</button>`;
+  commentUl.innerHTML = `<li class="id" style="font-weight:bold;">${comment.username}</li>
+  <li class="comment">${comment.review}</li>
+    <button id="${comment.username}" class="delete">del</button>
+    <button class="edit">edit</button>`;
   commentDiv.appendChild(commentUl);
 });
 
@@ -116,7 +116,8 @@ function editBtn(event) {
 }
 
 let editForm = document.createElement("input");
-editForm.innerHTML = `<button>저장</button>`;
+editForm.innerHTML = `<button>save</button>`;
+
 
 commentDiv.addEventListener("click", deleteBtn);
 commentDiv.addEventListener("click", editBtn);
