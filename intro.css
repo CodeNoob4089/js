@@ -54,3 +54,18 @@ body {
   display: block;
   animation: fadeIn 3s ease-in-out forwards;
 }
+.text {
+  font-family: "Anton", sans-serif;
+  font-size: 170px;
+  color: whitesmoke;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
