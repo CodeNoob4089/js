@@ -6,6 +6,13 @@ body {
   color: white;
   height: 100vh;
 }
+.inner {
+  display: block;
+  align-items: center;
+  padding: 70px 30px;
+  color: darkgray;
+  text-align: center;
+}
 
 .container {
   display: flex;

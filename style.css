@@ -5,7 +5,6 @@ body {
   background-color: black;
 }
 
-
 header {
   background-color: black;
   padding: 20px;
@@ -14,6 +13,14 @@ header {
   display: grid;
   grid-template-columns: 700px 1fr;
   grid-template-rows: 80px 1fr 200px 1fr;
+}
+
+.inner {
+  display: block;
+  align-items: center;
+  padding: 70px 30px;
+  color: darkgray;
+  text-align: center;
 }
 
 .home {
@@ -67,50 +74,50 @@ h1 {
 }
 
 #topMoviesContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .top-card {
-    width: 200px;
-    height: 300px;
-    background-color: #f2f2f2;
-    margin: 0 10px;
-    border-radius: 10px;
-    transition: transform 0.3s, background-color 0.3s;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 200px;
+  height: 300px;
+  background-color: #f2f2f2;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .top-card:hover {
-    transform: scale(1.5);
-    background-color: #f1f1f1;
+  transform: scale(1.5);
+  background-color: #f1f1f1;
 }
 
 .top-card::before {
-    content: attr(data-rank);
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    color: #f1f1f1;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 60px;
+  content: attr(data-rank);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  color: #f1f1f1;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 60px;
 }
 
 .card-container {
@@ -133,8 +140,8 @@ h1 {
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -152,8 +159,8 @@ h1 {
   height: 100%;
   padding: 15px;
   box-sizing: border-box;
-  /* opacity: 0;
-  transition: opacity 0.35s ease-in-out; */
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
 }
 
 .card:hover .card-text {
