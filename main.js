@@ -7,15 +7,38 @@ const options = {
   },
 };
 
+const topMovie1 = document.getElementById("topMovie1");
+const topMovie2 = document.getElementById("topMovie2");
+const topMovie3 = document.getElementById("topMovie3");
+
 let movies = [];
 
-fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", options)
+
+fetch(
+  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+  options
+)
   .then((response) => response.json())
   .then((data) => {
     movies = data.results;
     displayMovies(movies);
+    displayTopMovies(movies);
   })
   .catch((err) => console.error(err));
+
+function displayTopMovies(movies) {
+  topMovie1.innerHTML = `
+      <img src="https://image.tmdb.org/t/p/w500/${movies[1].poster_path}" alt="${movies[1].title}" />
+    `;
+  topMovie2.innerHTML = `
+      <img src="https://image.tmdb.org/t/p/w500/${movies[0].poster_path}" alt="${movies[0].title}" />
+    `;
+  topMovie3.innerHTML = `
+      <img src="https://image.tmdb.org/t/p/w500/${movies[2].poster_path}" alt="${movies[2].title}" />
+    `;
+}
+
+
 
 function displayMovies(movies) {
   const movieContainer = document.getElementById("movieContainer");

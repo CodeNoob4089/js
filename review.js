@@ -105,7 +105,7 @@ function editBtn(event) {
   console.log(event.target.className);
   const parent = event.target.parentNode;
   if (event.target.matches(".edit")) {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     const username = parent.querySelectorAll("li")[0].innerHTML;
     const review = parent.querySelectorAll("li")[1].innerHTML;
     const newPassword = document.querySelector(".password").value;
@@ -117,7 +117,6 @@ function editBtn(event) {
 
 let editForm = document.createElement("input");
 editForm.innerHTML = `<button>save</button>`;
-
 
 commentDiv.addEventListener("click", deleteBtn);
 commentDiv.addEventListener("click", editBtn);
