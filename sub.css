@@ -1,1 +1,145 @@
+.temp {
+  display: flex;
+  position: relative;
+  z-index: 100;
+  padding-top: 80px;
+  margin: 30px 90px;
+  justify-content: center;
+  align-items: center;
+}
 
+.poster {
+  margin-right: 30px;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  filter: blur(8px);
+  opacity: 0.75;
+}
+
+p {
+  max-width: 600px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+}
+.info > div > h1 {
+  margin-top: 0;
+}
+.info > div > ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.backBtn {
+  z-index: 100;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+i {
+  font-size: 30px;
+}
+.username,
+      .review,
+      .password {
+        height: 30px;
+        padding: 0;
+        font-size: 15px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: rgb(233, 233, 233);
+      }
+      .username, .password {
+        width: 100px;
+      }
+      .review {
+        width: 300px;
+      }
+      .submit-button {
+        width: 50px;
+        height: 30px;
+        padding: 0;
+        font-size: 12px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        background-color: rgb(233, 233, 233);
+      }
+    
+      
+      #review-list {
+        width: 500px;
+        height: 350px;
+        margin: 30px auto;
+        position: relative;
+        z-index: 100;
+      }
+      #review-list::-webkit-scrollbar {
+      display: none; /* 크롬, 사파리, 오페라, 엣지 */
+      }
+      form {
+        width: 700px;
+        margin: 50px auto 50px auto;
+        text-align: center;
+      }
+      
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin: 0;
+        padding: 0;
+
+        line-height: 40px;
+      }
+      ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+       
+      }
+      li {
+        display: inline-flex;
+        
+      }
+      .id {
+        min-width: 70px;
+        margin-right: 2px;
+      }
+      .comment {
+        max-width: 330px;
+        /* white-space: normal; */
+        /* word-wrap: break-word */
+        /* overflow: hidden; */
+      }
+      .edit {
+        float: right;
+        border-radius: 15px;
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+      .delete {
+        float: right;
+        border-radius: 15px;
+        margin-top: 5px;
+      }
+      /* .username {
+        font-weight:bold;
+      } */

@@ -39,6 +39,11 @@ function showMovieDetails() {
   <h3>${movie.release_date}</h3>
   <h3>평점 : ${movie.vote_average.toFixed(1)}</h3>
   <p>${movie.overview}</p>
+  <ul>
+  ${movie.genres.map((el) => {
+    return `<li>${el.name}</li>`;
+  })}
+  </ul>
   </div>
   `;
   document.title = `${movie.title} | 상세보기`;
