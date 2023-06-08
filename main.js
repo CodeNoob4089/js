@@ -9,10 +9,7 @@ const options = {
 
 let movies = [];
 
-fetch(
-  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
-  options
-)
+fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", options)
   .then((response) => response.json())
   .then((data) => {
     movies = data.results;
@@ -68,6 +65,11 @@ function filter() {
                         <h2 class="rating">${movie.vote_average}</h2>
                       </div>`;
 
+    card.setAttribute("data-id", movie.id);
+    card.addEventListener("click", function (event) {
+      const id = event.currentTarget.getAttribute("data-id");
+      window.location.href = `subpage.html?id=${id}`;
+    });
     movieContainer.appendChild(card);
   });
 }

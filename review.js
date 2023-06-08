@@ -48,6 +48,7 @@ function submit() {
     password = password.password;
     if (password == newPassword) {
       localStorage.setItem(username, JSON.stringify(comment));
+      alert("저장 했습니다!");
       location.reload();
     } else {
       alert("비밀번호가 일치하지 않습니다!");
@@ -116,6 +117,7 @@ function editBtn(event) {
 
 let editForm = document.createElement("input");
 editForm.innerHTML = `<button>save</button>`;
+
 
 commentDiv.addEventListener("click", deleteBtn);
 commentDiv.addEventListener("click", editBtn);
