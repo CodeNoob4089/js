@@ -4,34 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sub.css" />
     <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/97df680082.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" src="sub.css" />
+    <script src="review.js" defer></script>
   </head>
 
   <body>
-    <div class="container">
+    <div class="info">
       <div class="background"></div>
       <div class="temp" id="movieContainer"></div>
       <div class="backBtn">
-        <a href="javascript:history.back();">
-          <i class="fa-sharp fa-solid fa-house"></i>
-        </a>
-      </div>
-      <div class="reviewContainer">
-        <form onsubmit="return false;">
-          <input class="username" placeholder="작성자" autofocus />
-          <textarea class="review" placeholder="리뷰"></textarea>
-          <input class="password" type="password" placeholder="확인 비밀번호" />
-          <button class="submit-button">저장</button>
-        </form>
-        <div id="review-list"></div>
+        <a href="javascript:history.back();">뒤로가기</a>
       </div>
     </div>
+    <div class="review-list">
+      <div id="review-list" style="overflow-y: scroll"></div>
+      <form onsubmit="return false;">
+        <input class="username" placeholder="id" autofocus />
+        <input class="review" placeholder="comment"></input>
+        <input class="password" type="password" placeholder="password" />
+        <button class="submit-button">SAVE</button>
+      </form>
+    </div>
     <script src="sub.js"></script>
-    <script src="review.js" defer></script>
   </body>
 </html>
