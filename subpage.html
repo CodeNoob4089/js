@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" src="sub.css" />
     <style>
       .temp {
         display: flex;
@@ -15,9 +16,11 @@
         justify-content: center;
         align-items: center;
       }
+
       .poster {
         margin-right: 30px;
       }
+      
       .background {
         position: absolute;
         left: 0;
@@ -33,27 +36,126 @@
       p {
         max-width: 600px;
       }
-      .container {
+
+      .info {
         display: flex;
         justify-content: center;
       }
+
       .backBtn {
         z-index: 200;
         position: absolute;
         top: 0;
         left: 90%;
       }
+      .username,
+      .review,
+      .password {
+        height: 30px;
+        padding: 0;
+        font-size: 15px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+        background-color: rgb(233, 233, 233);
+      }
+      .username, .password {
+        width: 100px;
+      }
+      .review {
+        width: 300px;
+      }
+      .submit-button {
+        width: 50px;
+        height: 30px;
+        padding: 0;
+        font-size: 12px;
+        border: 0;
+        border-radius: 15px;
+        outline: none;
+        background-color: rgb(233, 233, 233);
+      }
+    
+      
+      #review-list {
+        width: 500px;
+        height: 350px;
+        margin: 30px auto;
+      }
+      #review-list::-webkit-scrollbar {
+      display: none; /* 크롬, 사파리, 오페라, 엣지 */
+      }
+      form {
+        width: 700px;
+        margin: 50px auto 50px auto;
+        text-align: center;
+      }
+      
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin: 0;
+        padding: 0;
+
+        line-height: 40px;
+      }
+      ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+       
+      }
+      li {
+        display: inline-flex;
+        
+      }
+      .id {
+        min-width: 70px;
+        margin-right: 2px;
+      }
+      .comment {
+        max-width: 330px;
+        /* white-space: normal; */
+        /* word-wrap: break-word */
+        /* overflow: hidden; */
+      }
+      .edit {
+        float: right;
+        border-radius: 15px;
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+      .delete {
+        float: right;
+        border-radius: 15px;
+        margin-top: 5px;
+      }
+      /* .username {
+        font-weight:bold;
+      } */
     </style>
+    <script src="review.js" defer></script>
   </head>
 
   <body>
-    <div class="container">
+    <div class="info">
       <div class="background"></div>
       <div class="temp" id="movieContainer"></div>
       <div class="backBtn">
         <a href="javascript:history.back();">뒤로가기</a>
       </div>
     </div>
+    <div class="review-list">
+      <div id="review-list" style="overflow-y: scroll"></div>
+      <form onsubmit="return false;">
+        <input class="username" placeholder="id" autofocus />
+        <input class="review" placeholder="comment"></input>
+        <input class="password" type="password" placeholder="password" />
+        <button class="submit-button">SAVE</button>
+      </form>
+    </div>
+
     <script src="sub.js"></script>
   </body>
 </html>
