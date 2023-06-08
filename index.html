@@ -8,15 +8,19 @@
   <body>
     <header>
       <h1 onclick="location.reload()">The Movie</h1>
+                  <div class="top-container">
+                <div id="topMoviesContainer">
+                    <div></div>
+                    <div class="top-card" data-rank="2" id="topMovie1"></div>
+                    <div class="top-card" data-rank="1" id="topMovie2"></div>
+                    <div class="top-card" data-rank="3" id="topMovie3"></div>
+                </div>
     </header>
   <div class="search-container">
-    <!-- <input type="text" id="searchInput" placeholder="영화 제목 검색" autofocus /> -->
-    <!-- <button onclick="filter()">검색</button> -->
     <a href="search.html" class="hover-1">SEARCH</a>
   </div>
 
   <div id="movieContainer" class="card-container"></div>
   <script src="main.js"></script>
 </body>
-
 </html>
