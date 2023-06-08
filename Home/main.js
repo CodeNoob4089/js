@@ -55,7 +55,7 @@ function displayMovies(movies) {
     card.setAttribute("data-id", movie.id);
     card.addEventListener("click", function (event) {
       const id = event.currentTarget.getAttribute("data-id");
-      window.location.href = `subpage.html?id=${id}`;
+      window.location.href = `../Sub/subpage.html?id=${id}`;
     });
     movieContainer.appendChild(card);
   });
@@ -68,7 +68,6 @@ function filter() {
   });
 
   const movieContainer = document.getElementById("movieContainer");
-  console.log(movieContainer);
 
   movieContainer.innerHTML = "";
 

@@ -29,7 +29,7 @@ body {
   padding: 0;
 }
 
-.wrapper {
+.background {
   position: relative;
   text-align: center;
   background-image: url(http://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif);
@@ -54,7 +54,7 @@ body {
   display: block;
   animation: fadeIn 3s ease-in-out forwards;
 }
-.text {
+.title {
   font-family: "Anton", sans-serif;
   font-size: 170px;
   color: whitesmoke;

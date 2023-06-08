@@ -20,12 +20,11 @@
   </head>
   <body>
     <audio>
-      <source src="intro.mp3" type="audio/mpeg" />
+      <source src="Assets/intro.mp3" type="audio/mpeg" />
     </audio>
-
-    <div class="wrapper">
+    <div class="background">
       <div class="overlay"></div>
-      <div class="text">THE MOVIE</div>
+      <div class="title">THE MOVIE</div>
     </div>
 
     <script>
@@ -33,11 +32,11 @@
         let overlay = document.querySelector(".overlay");
         overlay.classList.add("fade-in");
       }, 4000);
-      let text = document.querySelector(".text");
+      let text = document.querySelector(".title");
       text.addEventListener("click", function (event) {
         window.location.href = "index.html";
       });
-      let music = document.querySelector(".wrapper");
+      let music = document.querySelector(".background");
       let audio = document.querySelector("audio");
       audio.volume = 0.05;
       music.addEventListener("click", function (event) {

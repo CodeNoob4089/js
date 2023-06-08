@@ -32,9 +32,6 @@ comments.map((comment) => {
 
 //작성 시간
 let today = new Date();
-// let todayYear = today.getFullYear();
-// let todayMonth = today.getMonth();
-// let todayDate = today.getDate();
 
 //저장 버튼
 function submit() {
@@ -59,7 +56,6 @@ function submit() {
       location.reload();
     } else {
       alert("비밀번호가 일치하지 않습니다!");
-      // location.reload();
     }
   } else {
     //작성자명 없는 경우
@@ -68,7 +64,6 @@ function submit() {
         alert("비밀번호를 4글자 이상 입력해주세요!");
       } else {
         alert("저장 했습니다!");
-        // localStorage.removeItem(username, JSON.stringify(comment));
         localStorage.setItem(username, JSON.stringify(comment));
         location.reload();
       }
@@ -91,7 +86,6 @@ function deleteBtn(event) {
     let password = JSON.parse(localStorage.getItem(username));
     password = password.password;
     const newPassword = prompt("비밀번호를 입력하세요!");
-    console.log(username, password, newPassword);
 
     if (newPassword == password) {
       const result = confirm("정말 삭제하시겠습니까?");
@@ -109,10 +103,8 @@ function deleteBtn(event) {
 
 //수정 버튼
 function editBtn(event) {
-  console.log(event.target.className);
   const parent = event.target.parentNode;
   if (event.target.matches(".edit")) {
-    // window.scrollTo(0, 0);
     const username = parent.querySelectorAll("li")[0].innerHTML;
     const review = parent.querySelectorAll("li")[1].innerHTML;
     const newPassword = document.querySelector(".password").value;
@@ -121,9 +113,6 @@ function editBtn(event) {
     document.querySelector(".review").value = review;
   }
 }
-
-let editForm = document.createElement("input");
-editForm.innerHTML = `<button>save</button>`;
 
 commentDiv.addEventListener("click", deleteBtn);
 commentDiv.addEventListener("click", editBtn);
