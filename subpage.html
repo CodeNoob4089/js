@@ -1,74 +1,37 @@
 <!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ditail</title>
-        <style>
-            .temp {
-                display: flex;
-                position: relative;
-                z-index: 100;
-                padding-top: 80px;
-                margin: 30px 90px;
-                justify-content: center;
-                align-items: center;
-            }
-            .poster {
-                margin-right: 30px;
-            }
-            .background {
-                position: absolute;
-                left: 0;
-                top: 0;
-                background: no-repeat;
-                background-size: cover;
-                width: 100%;
-                height: 100vh;
-                filter: blur(8px);
-                opacity: 0.75;
-            }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sub.css">
+    <script
+      src="https://kit.fontawesome.com/97df680082.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="review.js" defer></script>
+  </head>
 
-            p {
-                max-width: 600px;
-            }
-            .container {
-                display: flex;
-                justify-content: center;
-            }
-            .backBtn {
-                z-index: 200;
-                position: absolute;
-                top: 0;
-                left: 90%;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <!-- 맨위 3등까지 표시할 카드 -->
-        </header>
-        <div class="container">
-            <div class="background"></div>
-            <div class="temp" id="movieContainer"></div>
-            <div class="backBtn">
-                <a href="javascript:history.back();">뒤로가기</a>
-            </div>
-        </div>
-        <div id="comments-container">
-            <!-- 댓글을 보여줄 컨테이너 -->
-        </div>
-
-        <h2>댓글 작성</h2>
-        <form id="comment-form">
-            <input type="text" id="nickname-input" placeholder="닉네임" required />
-            <input type="password" id="password-input" placeholder="비밀번호" required />
-            <textarea id="content-input" placeholder="댓글 내용" required></textarea>
-            <button type="submit">작성</button>
+  <body>
+    <div class="container">
+      <!-- <div class="background"></div> -->
+      <div class="temp" id="movieContainer"></div>
+      <div class="backBtn">
+        <a href="javascript:history.back();">
+          <i class="fa-sharp fa-solid fa-house" style="color: #d5207a;"></i>
+        </a>
+      </div>
+      <div class="review-list">
+        <div id="review-list" style="overflow-y: scroll"></div>
+        <form onsubmit="return false;">
+          <input class="username" placeholder="id" autofocus />
+          <input class="review" placeholder="comment"></input>
+          <input class="password" type="password" placeholder="password" />
+          <button class="submit-button">SAVE</button>
         </form>
-        <button id="delete-all-button">모든 댓글 삭제</button>
-        <script src="sub.js"></script>
-    </body>
+      </div>
+    </div>
+    <script src="sub.js"></script>
+  </body>
 </html>
