@@ -3,6 +3,7 @@ let urlParams = new URLSearchParams(queryString);
 let movieId = urlParams.get("id");
 const back = document.querySelector(".background");
 
+
 let movie = {};
 
 const options = {
@@ -22,6 +23,8 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
     loadComments();
   })
   .catch((err) => console.error(err));
+
+
 
 function showMovieDetails() {
   const movieContainer = document.getElementById("movieContainer");
