@@ -109,6 +109,10 @@ p {
 
 i {
   font-size: 30px;
+  transition: 0.2s;
+}
+i:hover {
+  font-size: 35px;
 }
 .username,
 .review,

@@ -123,6 +123,24 @@ button {
   font-size: 15px;
   font-weight: bolder;
 }
+
+i {
+  color: #d5207a;
+}
+.backBtn {
+  z-index: 9999;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.backBtn > a > i {
+  font-size: 30px;
+  transition: 0.2s;
+}
+.backBtn > a > i:hover {
+  font-size: 35px;
+}
 .search-box:hover > .search-btn {
   background-color: #fff;
 }
